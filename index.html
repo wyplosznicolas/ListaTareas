@@ -13,8 +13,15 @@
         <div class="tareasList">
             <form>
                 <input type="text" placeholder="Agregar tarea...">
+                <input type="color" id="color">
                 <button class="btn-add">+</button>
             </form>
+            <span>Prioridad: </span>
+            <select name="urgencia" id="urgencia">
+                <option value="postergable">Postergable</option>
+                <option value="pronto" selected>Pronto</option>
+                <option value="urgente">Urgente</option>
+            </select>
         </div>
         <div class="li-container">
             <ul></ul>

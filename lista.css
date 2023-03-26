@@ -35,7 +35,11 @@ input{
     width: 400px;
     outline: none;
 }
-
+#color{
+    width: 15%;
+    height: auto;
+    padding: 5px;
+}
 .btn-add{
     padding: 5px 15px;
     color: white;
@@ -49,6 +53,7 @@ input{
     cursor: pointer;
     background-color: lightseagreen;
 }
+
 
 .empty{
     color: darkslategray;
@@ -72,7 +77,8 @@ li p {
     margin: 0;
     padding: 15px;
     width: 100%;
-    color: black;
+    color: white;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
@@ -94,4 +100,13 @@ li p {
 .btn-delete:hover {
     cursor: pointer;
     background-color: rgb(248, 13, 13);
+}
+
+span{
+    color:black;
+}
+
+.prioridad{
+    color:white;
+    font-size: 1em;
 }
