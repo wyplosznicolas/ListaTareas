@@ -4,6 +4,10 @@ const ul = document.querySelector("ul");
 const empty = document.querySelector(".empty");
 const urgencia = document.querySelector("#urgencia");
 const inColor = document.querySelector("#color");
+const historial = [];
+const tituloHistorial = document.querySelector("h3");
+const contHistorial = document.querySelector(".container-historial");
+const listHistorial = document.querySelector(".lista-historial");
 
 addBtn.addEventListener("click", (e) =>{
 
@@ -34,6 +38,20 @@ addBtn.addEventListener("click", (e) =>{
         li.appendChild(addDeleteBtn());
         ul.appendChild(li);
 
+        if(historial.length <= 10){
+            historial.push(text)
+        }
+
+        if(historial.length === 10){
+            historial.forEach((text)=>{
+                const liHist = document.createElement("li");
+                liHist.textContent = text;
+                listHistorial.appendChild(liHist);
+            })
+        
+        }
+
+        
         input.value = "";
         li.style.backgroundColor = color;
         empty.style.display = "none";
@@ -43,8 +61,8 @@ addBtn.addEventListener("click", (e) =>{
     }else{
         alert("La tarea no puede estar vacía");
     }
-
 });
+
 
 function addDeleteBtn(){
 
@@ -81,4 +99,16 @@ function addDeleteBtn(){
     return deleteBtn;
 
 }
+
+tituloHistorial.addEventListener("click", (e) =>{
+
+    if (contHistorial.style.display === "none") {
+        contHistorial.style.display = "block";
+        tituloHistorial.textContent = 'Ocultar Historial';
+      } else {
+        contHistorial.style.display = "none";
+        tituloHistorial.textContent = "Mostrar Historial (primeros 10)";
+      }
+
+});
 

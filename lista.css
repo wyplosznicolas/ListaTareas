@@ -110,3 +110,34 @@ span{
     color:white;
     font-size: 1em;
 }
+
+h3{
+    text-align: center;
+    color:black;
+    background-color: white;
+    width: 25%;
+    position: absolute;
+    left:72%;
+    bottom:580px;
+}
+
+.container-historial{
+    width:25%;
+    height: 500px;
+    background-color: orange;
+    position: absolute;
+    left:72%;
+    bottom: 50px;
+    display: none;
+    border-radius: 15px;
+}
+
+.lista-historial li{
+    color:white;
+    background-color: orange;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 300px;
+    border-radius: 0;
+    font-weight: bold;
+}
